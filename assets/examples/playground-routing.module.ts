@@ -53,6 +53,7 @@ import { NbSearchEventComponent } from './search/search-event.component';
 import { NbTabsetShowcaseComponent } from './tabset/tabset-showcase.component';
 import { NbTabsetBadgeComponent } from './tabset/tabset-badge.component';
 import { NbTabsetWidthComponent } from './tabset/tabset-width.component';
+import { NbTabsetIconComponent } from './tabset/tabset-icon.component';
 import { NbUserShowcaseComponent } from './user/user-showcase.component';
 import { NbUserSizesComponent } from './user/user-sizes.component';
 import { NbBadgeShowcaseComponent } from './badge/badge-showcase.component';
@@ -65,7 +66,6 @@ import { NbContextMenuTestComponent } from './context-menu/context-menu-test.com
 import { NbLayoutHeaderTestComponent } from './layout/layout-header-test.component';
 import { NbLayoutFooterTestComponent } from './layout/layout-footer-test.component';
 import { NbThemeChangeTestComponent } from './layout/theme-change-test.component';
-import { NbThemeDynamicTestComponent } from './layout/theme-dynamic-test.component';
 import { NbThemeBreakpointTestComponent } from './layout/theme-breakpoint-test.component';
 import { NbLayoutTestComponent } from './layout/layout-test.component';
 import {
@@ -76,14 +76,16 @@ import {
   NbMenuItem331Component,
   NbMenuItem332Component,
   NbMenuItem33Component,
-  NbMenuItem3Component, NbMenuItem4Component,
+  NbMenuItem3Component,
+  NbMenuItem4Component,
   NbMenuTestComponent,
 } from './menu/menu-test.component';
 import { NbPopoverTestComponent } from './popover/popover-test.component';
 import {
-  NbRouteTabsetTestChild1Component, NbRouteTabsetTestChild2Component,
-  NbRouteTabsetTestComponent,
-} from './tabset/route-tabset-test.component';
+  NbRouteTabsetShowcaseChild1Component,
+  NbRouteTabsetShowcaseChild2Component,
+  NbRouteTabsetShowcaseComponent,
+} from './tabset/route-tabset-showcase.component';
 import { NbSearchTestComponent } from './search/search-test.component';
 import { NbSearchCustomizedTestComponent } from './search/search-customized-test.component';
 import { NbSidebarTestComponent } from './sidebar/sidebar-test.component';
@@ -103,6 +105,7 @@ import { NbAlertShowcaseComponent } from './alert/alert-showcase.component';
 import { NbAlertColorsComponent } from './alert/alert-colors.component';
 import { NbAlertAccentsComponent } from './alert/alert-accents.component';
 import { NbAlertSizesComponent } from './alert/alert-sizes.component';
+import { NbAlertOutlineComponent } from './alert/alert-outline.component';
 import { NbChatShowcaseComponent } from './chat/chat-showcase.component';
 import { NbChatColorsComponent } from './chat/chat-colors.component';
 import { NbChatSizesComponent } from './chat/chat-sizes.component';
@@ -123,6 +126,83 @@ import { NbAccordionShowcaseComponent } from './accordion/accordion-showcase.com
 import { NbAccordionTestComponent } from './accordion/accordion-test.component';
 import { NbAccordionMultiComponent } from './accordion/accordion-multi.component';
 import { NbAccordionToggleComponent } from './accordion/accordion-toggle.component';
+import { NbLayoutSidebarSubheaderComponent } from './layout/layout-sidebar-subheader.component';
+import { NbLayoutSubheaderComponent } from './layout/layout-subheader.component';
+import { NbButtonShowcaseComponent } from './button/button-showcase.component';
+import { NbButtonColorsComponent } from './button/button-colors.component';
+import { NbButtonShapesComponent } from './button/button-shapes.component';
+import { NbButtonHeroComponent } from './button/button-hero.component';
+import { NbButtonOutlineComponent } from './button/button-outline.component';
+import { NbButtonSizesComponent } from './button/button-sizes.component';
+import { NbButtonTypesComponent } from './button/button-types.component';
+import { NbButtonFullWidthComponent } from './button/button-full-width.component';
+import { NbSimpleListShowcaseComponent } from './list/simple-list-showcase.component';
+import { NbUsersListShowcaseComponent } from './list/users-list-showcase.component';
+import { NbCardWithoutBodyComponent } from './card/card-without-body.component';
+import { NbInfiniteListShowcaseComponent } from './infinite-list/infinite-list-showcase.component';
+import { NbInfiniteListScrollModesComponent } from './infinite-list/infinite-list-scroll-modes.component';
+import { NbInfiniteNewsListComponent } from './infinite-list/infinite-news-list.component';
+import { NbInfiniteListPlaceholdersComponent } from './infinite-list/infinite-list-placeholders.component';
+import { NbInputsShowcaseComponent } from './input/input-showcase.component';
+import { NbInputColorsComponent } from './input/input-colors.component';
+import { NbInputSizesComponent } from './input/input-sizes.component';
+import { NbInputShapesComponent } from './input/input-shapes.component';
+import { NbInputTypesComponent } from './input/input-types.component';
+import { NbInputFullWidthComponent } from './input/input-full-width.component';
+import { NbScrollWindowComponent } from './scroll/scroll-window.component';
+import { NbCalendarBoundingMonthComponent } from './calendar/calendar-bounding-month.component';
+import { NbCalendarShowcaseComponent } from './calendar/calendar-showcase.component';
+import { NbCalendarRangeShowcaseComponent } from './calendar/calendar-range-showcase.component';
+import { NbCalendarStartViewComponent } from './calendar/calendar-start-view.component';
+import { NbCalendarCustomDayCellShowcaseComponent } from './calendar/calendar-custom-day-cell-showcase.component';
+import { NbCalendarFilterComponent } from './calendar/calendar-filter.component';
+import { NbCalendarMinMaxComponent } from './calendar/calendar-min-max.component';
+import { NbCalendarSizeComponent } from './calendar/calendar-size.component';
+import { NbCalendarKitFullCalendarShowcaseComponent } from './calendar-kit/calendar-kit-full-calendar.component';
+import { NbOverlayShowcaseComponent } from './overlay/overlay-showcase.component';
+import { NbDialogShowcaseComponent } from './dialog/dialog-showcase.component';
+import { NbDialogHasBackdropComponent } from './dialog/dialog-has-backdrop.component';
+import { NbDialogBackdropClickComponent } from './dialog/dialog-backdrop-click.component';
+import { NbDialogEscComponent } from './dialog/dialog-esc.component';
+import { NbDialogScrollComponent } from './dialog/dialog-scroll.component';
+import { NbDialogAutoFocusComponent } from './dialog/dialog-auto-focus.component';
+import { NbDialogResultComponent } from './dialog/dialog-result.component';
+import { NbDialogTemplateComponent } from './dialog/dialog-template.component';
+import { NbToastrShowcaseComponent } from './toastr/toastr-showcase.component';
+import { NbToastrPositionsComponent } from './toastr/toastr-positions.component';
+import { NbToastrStatusesComponent } from './toastr/toastr-statuses.component';
+import { NbToastrDurationComponent } from './toastr/toastr-duration.component';
+import { NbToastrDestroyByClickComponent } from './toastr/toastr-destroy-by-click.component';
+import { NbToastrPreventDuplicatesComponent } from './toastr/toastr-prevent-duplicates.component';
+import { NbToastrIconComponent } from './toastr/toastr-icon.component';
+import { NbTooltipShowcaseComponent } from './tooltip/tooltip-showcase.component';
+import { NbTooltipWithIconComponent } from './tooltip/tooltip-with-icon.component';
+import { NbTooltipPlacementsComponent } from './tooltip/tooltip-placements.component';
+import { NbTooltipColorsComponent } from './tooltip/tooltip-colors.component';
+import { NbSelectShowcaseComponent } from './select/select-showcase.component';
+import { NbSelectMultipleComponent } from './select/select-multiple.component';
+import { NbSelectStatusComponent } from './select/select-status.component';
+import { NbSelectHeroComponent } from './select/select-hero.component';
+import { NbSelectOutlineComponent } from './select/select-outline.component';
+import { NbSelectShapeComponent } from './select/select-shapes.component';
+import { NbSelectSizesComponent } from './select/select-sizes.component';
+import { NbSelectPlaceholderComponent } from './select/select-placeholder.component';
+import { NbSelectFormComponent } from './select/select-form.component';
+import { NbSelectDisabledComponent } from './select/select-disabled.component';
+import { NbSelectGroupsComponent } from './select/select-groups.component';
+import { NbSelectLabelShowcaseComponent } from './select/select-label.component';
+import { NbSelectCleanComponent } from './select/select-clean.component';
+import { NbWindowShowcaseComponent } from './window/window-showcase.component';
+import { NbTemplateWindowComponent } from './window/template-window.component';
+import { NbWindowsBackdropComponent } from './window/windows-backdrop.component';
+import { NbDatepickerShowcaseComponent } from './datepicker/datepicker-showcase.component';
+import { NbDatepickerFormsComponent } from './datepicker/datepicker-forms.component';
+import { NbDatepickerValidationComponent } from './datepicker/datepicker-validation.component';
+import { NbRangepickerShowcaseComponent } from './datepicker/rangepicker-showcase.component';
+import { NbRadioShowcaseComponent } from './radio/radio-showcase.component';
+import { NbRadioDisabledComponent } from './radio/radio-disabled.component';
+import { NbCalendarWithoutHeaderComponent } from './calendar/calendar-without-header.component';
+
 
 export const routes: Routes = [
   {
@@ -155,6 +235,134 @@ export const routes: Routes = [
           {
             path: 'popover-modes.component',
             component: NbPopoverModesComponent,
+          },
+        ],
+      },
+      {
+        path: 'tooltip',
+        children: [
+          {
+            path: 'tooltip-showcase.component',
+            component: NbTooltipShowcaseComponent,
+          },
+          {
+            path: 'tooltip-with-icon.component',
+            component: NbTooltipWithIconComponent,
+          },
+          {
+            path: 'tooltip-placements.component',
+            component: NbTooltipPlacementsComponent,
+          },
+          {
+            path: 'tooltip-colors.component',
+            component: NbTooltipColorsComponent,
+          },
+        ],
+      },
+      {
+        path: 'select',
+        children: [
+          {
+            path: 'select-showcase.component',
+            component: NbSelectShowcaseComponent,
+          },
+          {
+            path: 'select-multiple.component',
+            component: NbSelectMultipleComponent,
+          },
+          {
+            path: 'select-status.component',
+            component: NbSelectStatusComponent,
+          },
+          {
+            path: 'select-hero.component',
+            component: NbSelectHeroComponent,
+          },
+          {
+            path: 'select-outline.component',
+            component: NbSelectOutlineComponent,
+          },
+          {
+            path: 'select-shapes.component',
+            component: NbSelectShapeComponent,
+          },
+          {
+            path: 'select-sizes.component',
+            component: NbSelectSizesComponent,
+          },
+          {
+            path: 'select-placeholder.component',
+            component: NbSelectPlaceholderComponent,
+          },
+          {
+            path: 'select-form.component',
+            component: NbSelectFormComponent,
+          },
+          {
+            path: 'select-disabled.component',
+            component: NbSelectDisabledComponent,
+          },
+          {
+            path: 'select-groups.component',
+            component: NbSelectGroupsComponent,
+          },
+          {
+            path: 'select-label.component',
+            component: NbSelectLabelShowcaseComponent,
+          },
+          {
+            path: 'select-clean.component',
+            component: NbSelectCleanComponent,
+          },
+        ],
+      },
+      {
+        path: 'radio',
+        children: [
+          {
+            path: 'radio-showcase.component',
+            component: NbRadioShowcaseComponent,
+          },
+          {
+            path: 'radio-disabled.component',
+            component: NbRadioDisabledComponent,
+          },
+        ],
+      },
+      {
+        path: 'button',
+        children: [
+          {
+            path: 'button-showcase.component',
+            component: NbButtonShowcaseComponent,
+          },
+          {
+            path: 'button-colors.component',
+            component: NbButtonColorsComponent,
+          },
+          {
+            path: 'button-shapes.component',
+            component: NbButtonShapesComponent,
+          },
+          {
+            path: 'button-hero.component',
+            component: NbButtonHeroComponent,
+          },
+          {
+            path: 'button-outline.component',
+            component: NbButtonOutlineComponent,
+          },
+          {
+            path: 'button-sizes.component',
+            component: NbButtonSizesComponent,
+          },
+          {
+            path: 'button-types.component',
+            component: NbButtonTypesComponent,
+          },
+          {
+            path: 'button-full-width.component',
+            component: NbButtonFullWidthComponent,
           },
         ],
       },
@@ -205,6 +413,56 @@ export const routes: Routes = [
         ],
       },
       {
+        path: 'calendar',
+        children: [
+          {
+            path: 'calendar-showcase.component',
+            component: NbCalendarShowcaseComponent,
+          },
+          {
+            path: 'calendar-bounding-month.component',
+            component: NbCalendarBoundingMonthComponent,
+          },
+          {
+            path: 'calendar-start-view.component',
+            component: NbCalendarStartViewComponent,
+          },
+          {
+            path: 'calendar-range-showcase.component',
+            component: NbCalendarRangeShowcaseComponent,
+          },
+          {
+            path: 'calendar-custom-day-cell-showcase.component',
+            component: NbCalendarCustomDayCellShowcaseComponent,
+          },
+          {
+            path: 'calendar-filter.component',
+            component: NbCalendarFilterComponent,
+          },
+          {
+            path: 'calendar-min-max.component',
+            component: NbCalendarMinMaxComponent,
+          },
+          {
+            path: 'calendar-size.component',
+            component: NbCalendarSizeComponent,
+          },
+          {
+            path: 'calendar-without-header.component',
+            component: NbCalendarWithoutHeaderComponent,
+          },
+        ],
+      },
+      {
+        path: 'calendar-kit',
+        children: [
+          {
+            path: 'calendar-kit-full-calendar.component',
+            component: NbCalendarKitFullCalendarShowcaseComponent,
+          },
+        ],
+      },
+      {
         path: 'card',
         children: [
           {
@@ -230,6 +488,10 @@ export const routes: Routes = [
           {
             path: 'card-sizes.component',
             component: NbCardSizesComponent,
+          },
+          {
+            path: 'card-without-body.component',
+            component: NbCardWithoutBodyComponent,
           },
         ],
       },
@@ -310,6 +572,10 @@ export const routes: Routes = [
             path: 'alert-sizes.component',
             component: NbAlertSizesComponent,
           },
+          {
+            path: 'alert-outline.component',
+            component: NbAlertOutlineComponent,
+          },
         ],
       },
       {
@@ -374,8 +640,12 @@ export const routes: Routes = [
             component: NbTabsetWidthComponent,
           },
           {
-            path: 'route-tabset-test.component',
-            component: NbRouteTabsetTestComponent,
+            path: 'tabset-icon.component',
+            component: NbTabsetIconComponent,
+          },
+          {
+            path: 'route-tabset-showcase.component',
+            component: NbRouteTabsetShowcaseComponent,
             children: [
               {
                 path: '',
@@ -384,11 +654,11 @@ export const routes: Routes = [
               },
               {
                 path: 'tab1',
-                component: NbRouteTabsetTestChild1Component,
+                component: NbRouteTabsetShowcaseChild1Component,
               },
               {
                 path: 'tab2',
-                component: NbRouteTabsetTestChild2Component,
+                component: NbRouteTabsetShowcaseChild2Component,
               },
             ],
           },
@@ -516,6 +786,186 @@ export const routes: Routes = [
           },
         ],
       },
+      {
+        path: 'list',
+        children: [
+          {
+            path: 'simple-list-showcase.component',
+            component: NbSimpleListShowcaseComponent,
+          },
+          {
+            path: 'users-list-showcase.component',
+            component: NbUsersListShowcaseComponent,
+          },
+        ],
+      },
+      {
+        path: 'infinite-list',
+        children: [
+          {
+            path: 'infinite-list-showcase.component',
+            component: NbInfiniteListShowcaseComponent,
+          },
+          {
+            path: 'infinite-list-scroll-modes.component',
+            component: NbInfiniteListScrollModesComponent,
+          },
+          {
+            path: 'infinite-news-list.component',
+            component: NbInfiniteNewsListComponent,
+          },
+          {
+            path: 'infinite-list-placeholders.component',
+            component: NbInfiniteListPlaceholdersComponent,
+          },
+        ],
+      },
+      {
+        path: 'input',
+        children: [
+          {
+            path: 'input-showcase.component',
+            component: NbInputsShowcaseComponent,
+          },
+          {
+            path: 'input-colors.component',
+            component: NbInputColorsComponent,
+          },
+          {
+            path: 'input-sizes.component',
+            component: NbInputSizesComponent,
+          },
+          {
+            path: 'input-shapes.component',
+            component: NbInputShapesComponent,
+          },
+          {
+            path: 'input-types.component',
+            component: NbInputTypesComponent,
+          },
+          {
+            path: 'input-full-width.component',
+            component: NbInputFullWidthComponent,
+          },
+        ],
+      },
+      {
+        path: 'overlay',
+        children: [
+          {
+            path: 'overlay-showcase.component',
+            component: NbOverlayShowcaseComponent,
+          },
+        ],
+      },
+      {
+        path: 'dialog',
+        children: [
+          {
+            path: 'dialog-showcase.component',
+            component: NbDialogShowcaseComponent,
+          },
+          {
+            path: 'dialog-has-backdrop.component',
+            component: NbDialogHasBackdropComponent,
+          },
+          {
+            path: 'dialog-backdrop-click.component',
+            component: NbDialogBackdropClickComponent,
+          },
+          {
+            path: 'dialog-esc.component',
+            component: NbDialogEscComponent,
+          },
+          {
+            path: 'dialog-scroll.component',
+            component: NbDialogScrollComponent,
+          },
+          {
+            path: 'dialog-auto-focus.component',
+            component: NbDialogAutoFocusComponent,
+          },
+          {
+            path: 'dialog-result.component',
+            component: NbDialogResultComponent,
+          },
+          {
+            path: 'dialog-template.component',
+            component: NbDialogTemplateComponent,
+          },
+        ],
+      },
+      {
+        path: 'toastr',
+        children: [
+          {
+            path: 'toastr-showcase.component',
+            component: NbToastrShowcaseComponent,
+          },
+          {
+            path: 'toastr-positions.component',
+            component: NbToastrPositionsComponent,
+          },
+          {
+            path: 'toastr-statuses.component',
+            component: NbToastrStatusesComponent,
+          },
+          {
+            path: 'toastr-duration.component',
+            component: NbToastrDurationComponent,
+          },
+          {
+            path: 'toastr-destroy-by-click.component',
+            component: NbToastrDestroyByClickComponent,
+          },
+          {
+            path: 'toastr-prevent-duplicates.component',
+            component: NbToastrPreventDuplicatesComponent,
+          },
+          {
+            path: 'toastr-icon.component',
+            component: NbToastrIconComponent,
+          },
+        ],
+      },
+      {
+        path: 'window',
+        children: [
+          {
+            path: 'window-showcase.component',
+            component: NbWindowShowcaseComponent,
+          },
+          {
+            path: 'template-window.component',
+            component: NbTemplateWindowComponent,
+          },
+          {
+            path: 'windows-backdrop.component',
+            component: NbWindowsBackdropComponent,
+          },
+        ],
+      },
+      {
+        path: 'datepicker',
+        children: [
+          {
+            path: 'datepicker-showcase.component',
+            component: NbDatepickerShowcaseComponent,
+          },
+          {
+            path: 'datepicker-forms.component',
+            component: NbDatepickerFormsComponent,
+          },
+          {
+            path: 'datepicker-validation.component',
+            component: NbDatepickerValidationComponent,
+          },
+          {
+            path: 'rangepicker-showcase.component',
+            component: NbRangepickerShowcaseComponent,
+          },
+        ],
+      },
     ],
   },
   {
@@ -559,10 +1009,6 @@ export const routes: Routes = [
             component: NbThemeChangeTestComponent,
           },
           {
-            path: 'theme-dynamic-test.component',
-            component: NbThemeDynamicTestComponent,
-          },
-          {
             path: 'theme-breakpoint-test.component',
             component: NbThemeBreakpointTestComponent,
           },
@@ -577,6 +1023,14 @@ export const routes: Routes = [
           {
             path: 'layout-fixed-header.component',
             component: NbLayoutFixedHeaderComponent,
+          },
+          {
+            path: 'layout-sidebar-subheader.component',
+            component: NbLayoutSidebarSubheaderComponent,
+          },
+          {
+            path: 'layout-subheader.component',
+            component: NbLayoutSubheaderComponent,
           },
           {
             path: 'layout-column-left.component',
@@ -734,6 +1188,15 @@ export const routes: Routes = [
           },
         ],
       },
+      {
+        path: 'scroll',
+        children: [
+          {
+            path: 'scroll-window.component',
+            component: NbScrollWindowComponent,
+          },
+        ],
+      },
     ],
   },
   {
@@ -743,6 +1206,10 @@ export const routes: Routes = [
   {
     path: 'oauth2-password',
     loadChildren: './oauth2-password/oauth2-password.module#NbOAuth2PasswordPlaygroundModule',
+  },
+  {
+    path: 'smart-home',
+    loadChildren: './smart-home/app.module#NgxAppModule',
   },
   {
     path: '',

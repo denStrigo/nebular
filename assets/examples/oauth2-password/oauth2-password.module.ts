@@ -11,18 +11,18 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import {
-  NbCardModule,
-  NbLayoutModule,
+  NbAlertModule, NbCardModule, NbInputModule, NbLayoutModule,
 } from '@nebular/theme';
 
 import {
   NbAuthModule,
-  NbOAuth2AuthStrategy, NbOAuth2GrantType,
+  NbAuthOAuth2JWTToken,
+  NbOAuth2AuthStrategy,
+  NbOAuth2ClientAuthMethod,
+  NbOAuth2GrantType,
 } from '@nebular/auth';
 
 import { NbOAuth2PasswordLoginComponent } from './oauth2-password-login.component';
-import { NbAuthOAuth2Token } from '@nebular/auth';
-
 
 
 @NgModule({
@@ -52,13 +52,15 @@ import { NbAuthOAuth2Token } from '@nebular/auth';
       strategies: [
          NbOAuth2AuthStrategy.setup({
           name: 'password',
-          clientId: 'test',
-          clientSecret: 'secret',
+          clientId: 'Aladdin',
+          clientSecret: 'open sesame',
+          clientAuthMethod: NbOAuth2ClientAuthMethod.BASIC,
           baseEndpoint: 'http://localhost:4400/api/auth/',
           token: {
             endpoint: 'token',
             grantType: NbOAuth2GrantType.PASSWORD,
-            class: NbAuthOAuth2Token,
+            class: NbAuthOAuth2JWTToken,
+            requireValidToken: true,
           },
           redirect: {
             success: '/oauth2-password',
@@ -69,6 +71,8 @@ import { NbAuthOAuth2Token } from '@nebular/auth';
 
     NbCardModule,
     NbLayoutModule,
+    NbAlertModule,
+    NbInputModule,
   ],
   declarations: [
     NbOAuth2PasswordLoginComponent,
